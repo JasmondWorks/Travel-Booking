@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-family-primary: "Montserrat", sans-serif;
+  --font-family-secondary: "Poppins", sans-serif;
+
+  --clr-primary: #8dd3bb;
+  --clr-primary--light: #cdeae1;
+  --clr-primary--dark: #112211;
+}
+
+@font-face {
+  font-family: "TradeGothicLTStd-Extended";
+  src: url("/public/fonts/TradeGothicLTStd-Extended.otf") format("p[opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Trade Gothic LT Bold Extended";
+  src: url("/public/fonts/Trade Gothic LT Bold Extended.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: var(--font-family-primary);
+}
+
+/* utilities */
+.font-secondary {
+  font-family: var(--font-family-secondary);
+}
+.container {
+  @apply mx-auto max-w-7xl px-5;
+}
+.rounded--sm {
+  @apply rounded-md;
+}
+.rounded--md {
+  @apply rounded-lg;
+}
+.rounded--lg {
+  @apply rounded-2xl;
+}
+
+.headline,
+.h1 {
+  @apply font-bold text-4xl md:text-5xl font-secondaryBold !leading-snug;
+}
+.h2 {
+  @apply font-bold text-3xl;
+}
+.h3 {
+  @apply text-2xl font-bold;
+}
+.h4 {
+  @apply text-xl font-bold;
+}
+
+.link {
+  @apply font-semibold;
+}
+
+.card {
+  @apply shadow-xl rounded-lg p-5;
+}
+
+.flex-between {
+  @apply flex items-center justify-between gap-5;
+}
+.v-space--sm {
+  @apply space-y-3;
+}
+.v-space {
+  @apply space-y-5;
+}
+.v-space--lg {
+  @apply space-y-8;
+}
